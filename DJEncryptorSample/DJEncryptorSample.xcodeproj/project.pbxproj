@@ -1,0 +1,579 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A32E29A1EBAD75E00D9E8A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A32E2991EBAD75E00D9E8A5 /* main.m */; };
+		5A32E29D1EBAD75E00D9E8A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A32E29C1EBAD75E00D9E8A5 /* AppDelegate.m */; };
+		5A32E2A01EBAD75E00D9E8A5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A32E29F1EBAD75E00D9E8A5 /* ViewController.m */; };
+		5A32E2A31EBAD75E00D9E8A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A32E2A11EBAD75E00D9E8A5 /* Main.storyboard */; };
+		5A32E2A51EBAD75E00D9E8A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A32E2A41EBAD75E00D9E8A5 /* Assets.xcassets */; };
+		5A32E2A81EBAD75E00D9E8A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A32E2A61EBAD75E00D9E8A5 /* LaunchScreen.storyboard */; };
+		5A32E2B31EBAD75E00D9E8A5 /* DJEncryptorSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A32E2B21EBAD75E00D9E8A5 /* DJEncryptorSampleTests.m */; };
+		5A32E2BE1EBAD75E00D9E8A5 /* DJEncryptorSampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A32E2BD1EBAD75E00D9E8A5 /* DJEncryptorSampleUITests.m */; };
+		5A32E2CE1EBAD7CC00D9E8A5 /* NSData+Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A32E2CD1EBAD7CC00D9E8A5 /* NSData+Encrypt.m */; };
+		5A32E2D11EBAD7E600D9E8A5 /* NSString+Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A32E2D01EBAD7E600D9E8A5 /* NSString+Encrypt.m */; };
+		5A32E2D61EBAFE2F00D9E8A5 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A32E2D41EBAFE2F00D9E8A5 /* GTMBase64.m */; };
+		5A32E2DA1EBAFF1E00D9E8A5 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A32E2D91EBAFF1E00D9E8A5 /* libz.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5A32E2AF1EBAD75E00D9E8A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A32E28D1EBAD75E00D9E8A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A32E2941EBAD75E00D9E8A5;
+			remoteInfo = DJEncryptorSample;
+		};
+		5A32E2BA1EBAD75E00D9E8A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A32E28D1EBAD75E00D9E8A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A32E2941EBAD75E00D9E8A5;
+			remoteInfo = DJEncryptorSample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5A32E2951EBAD75E00D9E8A5 /* DJEncryptorSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DJEncryptorSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A32E2991EBAD75E00D9E8A5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5A32E29B1EBAD75E00D9E8A5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5A32E29C1EBAD75E00D9E8A5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5A32E29E1EBAD75E00D9E8A5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5A32E29F1EBAD75E00D9E8A5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5A32E2A21EBAD75E00D9E8A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5A32E2A41EBAD75E00D9E8A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5A32E2A71EBAD75E00D9E8A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5A32E2A91EBAD75E00D9E8A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A32E2AE1EBAD75E00D9E8A5 /* DJEncryptorSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DJEncryptorSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A32E2B21EBAD75E00D9E8A5 /* DJEncryptorSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DJEncryptorSampleTests.m; sourceTree = "<group>"; };
+		5A32E2B41EBAD75E00D9E8A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A32E2B91EBAD75E00D9E8A5 /* DJEncryptorSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DJEncryptorSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A32E2BD1EBAD75E00D9E8A5 /* DJEncryptorSampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DJEncryptorSampleUITests.m; sourceTree = "<group>"; };
+		5A32E2BF1EBAD75E00D9E8A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A32E2CC1EBAD7CC00D9E8A5 /* NSData+Encrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Encrypt.h"; sourceTree = "<group>"; };
+		5A32E2CD1EBAD7CC00D9E8A5 /* NSData+Encrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Encrypt.m"; sourceTree = "<group>"; };
+		5A32E2CF1EBAD7E600D9E8A5 /* NSString+Encrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Encrypt.h"; sourceTree = "<group>"; };
+		5A32E2D01EBAD7E600D9E8A5 /* NSString+Encrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encrypt.m"; sourceTree = "<group>"; };
+		5A32E2D31EBAFE2F00D9E8A5 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		5A32E2D41EBAFE2F00D9E8A5 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		5A32E2D51EBAFE2F00D9E8A5 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		5A32E2D91EBAFF1E00D9E8A5 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A32E2921EBAD75E00D9E8A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A32E2DA1EBAFF1E00D9E8A5 /* libz.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A32E2AB1EBAD75E00D9E8A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A32E2B61EBAD75E00D9E8A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A32E28C1EBAD75E00D9E8A5 = {
+			isa = PBXGroup;
+			children = (
+				5A32E2CB1EBAD78200D9E8A5 /* DJEncryptor */,
+				5A32E2971EBAD75E00D9E8A5 /* DJEncryptorSample */,
+				5A32E2B11EBAD75E00D9E8A5 /* DJEncryptorSampleTests */,
+				5A32E2BC1EBAD75E00D9E8A5 /* DJEncryptorSampleUITests */,
+				5A32E2961EBAD75E00D9E8A5 /* Products */,
+				5A32E2D81EBAFF1D00D9E8A5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5A32E2961EBAD75E00D9E8A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A32E2951EBAD75E00D9E8A5 /* DJEncryptorSample.app */,
+				5A32E2AE1EBAD75E00D9E8A5 /* DJEncryptorSampleTests.xctest */,
+				5A32E2B91EBAD75E00D9E8A5 /* DJEncryptorSampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5A32E2971EBAD75E00D9E8A5 /* DJEncryptorSample */ = {
+			isa = PBXGroup;
+			children = (
+				5A32E29B1EBAD75E00D9E8A5 /* AppDelegate.h */,
+				5A32E29C1EBAD75E00D9E8A5 /* AppDelegate.m */,
+				5A32E29E1EBAD75E00D9E8A5 /* ViewController.h */,
+				5A32E29F1EBAD75E00D9E8A5 /* ViewController.m */,
+				5A32E2A11EBAD75E00D9E8A5 /* Main.storyboard */,
+				5A32E2A41EBAD75E00D9E8A5 /* Assets.xcassets */,
+				5A32E2A61EBAD75E00D9E8A5 /* LaunchScreen.storyboard */,
+				5A32E2A91EBAD75E00D9E8A5 /* Info.plist */,
+				5A32E2981EBAD75E00D9E8A5 /* Supporting Files */,
+			);
+			path = DJEncryptorSample;
+			sourceTree = "<group>";
+		};
+		5A32E2981EBAD75E00D9E8A5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5A32E2991EBAD75E00D9E8A5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5A32E2B11EBAD75E00D9E8A5 /* DJEncryptorSampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A32E2B21EBAD75E00D9E8A5 /* DJEncryptorSampleTests.m */,
+				5A32E2B41EBAD75E00D9E8A5 /* Info.plist */,
+			);
+			path = DJEncryptorSampleTests;
+			sourceTree = "<group>";
+		};
+		5A32E2BC1EBAD75E00D9E8A5 /* DJEncryptorSampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5A32E2BD1EBAD75E00D9E8A5 /* DJEncryptorSampleUITests.m */,
+				5A32E2BF1EBAD75E00D9E8A5 /* Info.plist */,
+			);
+			path = DJEncryptorSampleUITests;
+			sourceTree = "<group>";
+		};
+		5A32E2CB1EBAD78200D9E8A5 /* DJEncryptor */ = {
+			isa = PBXGroup;
+			children = (
+				5A32E2D21EBAFE2F00D9E8A5 /* GTMBase64 */,
+				5A32E2CC1EBAD7CC00D9E8A5 /* NSData+Encrypt.h */,
+				5A32E2CD1EBAD7CC00D9E8A5 /* NSData+Encrypt.m */,
+				5A32E2CF1EBAD7E600D9E8A5 /* NSString+Encrypt.h */,
+				5A32E2D01EBAD7E600D9E8A5 /* NSString+Encrypt.m */,
+			);
+			name = DJEncryptor;
+			path = ../DJEncryptor;
+			sourceTree = "<group>";
+		};
+		5A32E2D21EBAFE2F00D9E8A5 /* GTMBase64 */ = {
+			isa = PBXGroup;
+			children = (
+				5A32E2D51EBAFE2F00D9E8A5 /* GTMDefines.h */,
+				5A32E2D31EBAFE2F00D9E8A5 /* GTMBase64.h */,
+				5A32E2D41EBAFE2F00D9E8A5 /* GTMBase64.m */,
+			);
+			path = GTMBase64;
+			sourceTree = "<group>";
+		};
+		5A32E2D81EBAFF1D00D9E8A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A32E2D91EBAFF1E00D9E8A5 /* libz.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5A32E2941EBAD75E00D9E8A5 /* DJEncryptorSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A32E2C21EBAD75E00D9E8A5 /* Build configuration list for PBXNativeTarget "DJEncryptorSample" */;
+			buildPhases = (
+				5A32E2911EBAD75E00D9E8A5 /* Sources */,
+				5A32E2921EBAD75E00D9E8A5 /* Frameworks */,
+				5A32E2931EBAD75E00D9E8A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DJEncryptorSample;
+			productName = DJEncryptorSample;
+			productReference = 5A32E2951EBAD75E00D9E8A5 /* DJEncryptorSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5A32E2AD1EBAD75E00D9E8A5 /* DJEncryptorSampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A32E2C51EBAD75E00D9E8A5 /* Build configuration list for PBXNativeTarget "DJEncryptorSampleTests" */;
+			buildPhases = (
+				5A32E2AA1EBAD75E00D9E8A5 /* Sources */,
+				5A32E2AB1EBAD75E00D9E8A5 /* Frameworks */,
+				5A32E2AC1EBAD75E00D9E8A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A32E2B01EBAD75E00D9E8A5 /* PBXTargetDependency */,
+			);
+			name = DJEncryptorSampleTests;
+			productName = DJEncryptorSampleTests;
+			productReference = 5A32E2AE1EBAD75E00D9E8A5 /* DJEncryptorSampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5A32E2B81EBAD75E00D9E8A5 /* DJEncryptorSampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A32E2C81EBAD75E00D9E8A5 /* Build configuration list for PBXNativeTarget "DJEncryptorSampleUITests" */;
+			buildPhases = (
+				5A32E2B51EBAD75E00D9E8A5 /* Sources */,
+				5A32E2B61EBAD75E00D9E8A5 /* Frameworks */,
+				5A32E2B71EBAD75E00D9E8A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A32E2BB1EBAD75E00D9E8A5 /* PBXTargetDependency */,
+			);
+			name = DJEncryptorSampleUITests;
+			productName = DJEncryptorSampleUITests;
+			productReference = 5A32E2B91EBAD75E00D9E8A5 /* DJEncryptorSampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5A32E28D1EBAD75E00D9E8A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = DJ;
+				TargetAttributes = {
+					5A32E2941EBAD75E00D9E8A5 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+					5A32E2AD1EBAD75E00D9E8A5 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5A32E2941EBAD75E00D9E8A5;
+					};
+					5A32E2B81EBAD75E00D9E8A5 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5A32E2941EBAD75E00D9E8A5;
+					};
+				};
+			};
+			buildConfigurationList = 5A32E2901EBAD75E00D9E8A5 /* Build configuration list for PBXProject "DJEncryptorSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5A32E28C1EBAD75E00D9E8A5;
+			productRefGroup = 5A32E2961EBAD75E00D9E8A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5A32E2941EBAD75E00D9E8A5 /* DJEncryptorSample */,
+				5A32E2AD1EBAD75E00D9E8A5 /* DJEncryptorSampleTests */,
+				5A32E2B81EBAD75E00D9E8A5 /* DJEncryptorSampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5A32E2931EBAD75E00D9E8A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A32E2A81EBAD75E00D9E8A5 /* LaunchScreen.storyboard in Resources */,
+				5A32E2A51EBAD75E00D9E8A5 /* Assets.xcassets in Resources */,
+				5A32E2A31EBAD75E00D9E8A5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A32E2AC1EBAD75E00D9E8A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A32E2B71EBAD75E00D9E8A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A32E2911EBAD75E00D9E8A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A32E2A01EBAD75E00D9E8A5 /* ViewController.m in Sources */,
+				5A32E2D61EBAFE2F00D9E8A5 /* GTMBase64.m in Sources */,
+				5A32E29D1EBAD75E00D9E8A5 /* AppDelegate.m in Sources */,
+				5A32E2CE1EBAD7CC00D9E8A5 /* NSData+Encrypt.m in Sources */,
+				5A32E2D11EBAD7E600D9E8A5 /* NSString+Encrypt.m in Sources */,
+				5A32E29A1EBAD75E00D9E8A5 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A32E2AA1EBAD75E00D9E8A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A32E2B31EBAD75E00D9E8A5 /* DJEncryptorSampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A32E2B51EBAD75E00D9E8A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A32E2BE1EBAD75E00D9E8A5 /* DJEncryptorSampleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5A32E2B01EBAD75E00D9E8A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A32E2941EBAD75E00D9E8A5 /* DJEncryptorSample */;
+			targetProxy = 5A32E2AF1EBAD75E00D9E8A5 /* PBXContainerItemProxy */;
+		};
+		5A32E2BB1EBAD75E00D9E8A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A32E2941EBAD75E00D9E8A5 /* DJEncryptorSample */;
+			targetProxy = 5A32E2BA1EBAD75E00D9E8A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5A32E2A11EBAD75E00D9E8A5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A32E2A21EBAD75E00D9E8A5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5A32E2A61EBAD75E00D9E8A5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A32E2A71EBAD75E00D9E8A5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5A32E2C01EBAD75E00D9E8A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5A32E2C11EBAD75E00D9E8A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5A32E2C31EBAD75E00D9E8A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DJEncryptorSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DJ.DJEncryptorSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5A32E2C41EBAD75E00D9E8A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DJEncryptorSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DJ.DJEncryptorSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5A32E2C61EBAD75E00D9E8A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DJEncryptorSampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DJ.DJEncryptorSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DJEncryptorSample.app/DJEncryptorSample";
+			};
+			name = Debug;
+		};
+		5A32E2C71EBAD75E00D9E8A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DJEncryptorSampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DJ.DJEncryptorSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DJEncryptorSample.app/DJEncryptorSample";
+			};
+			name = Release;
+		};
+		5A32E2C91EBAD75E00D9E8A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DJEncryptorSampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DJ.DJEncryptorSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DJEncryptorSample;
+			};
+			name = Debug;
+		};
+		5A32E2CA1EBAD75E00D9E8A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DJEncryptorSampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DJ.DJEncryptorSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DJEncryptorSample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5A32E2901EBAD75E00D9E8A5 /* Build configuration list for PBXProject "DJEncryptorSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A32E2C01EBAD75E00D9E8A5 /* Debug */,
+				5A32E2C11EBAD75E00D9E8A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A32E2C21EBAD75E00D9E8A5 /* Build configuration list for PBXNativeTarget "DJEncryptorSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A32E2C31EBAD75E00D9E8A5 /* Debug */,
+				5A32E2C41EBAD75E00D9E8A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5A32E2C51EBAD75E00D9E8A5 /* Build configuration list for PBXNativeTarget "DJEncryptorSampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A32E2C61EBAD75E00D9E8A5 /* Debug */,
+				5A32E2C71EBAD75E00D9E8A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5A32E2C81EBAD75E00D9E8A5 /* Build configuration list for PBXNativeTarget "DJEncryptorSampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A32E2C91EBAD75E00D9E8A5 /* Debug */,
+				5A32E2CA1EBAD75E00D9E8A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5A32E28D1EBAD75E00D9E8A5 /* Project object */;
+}
