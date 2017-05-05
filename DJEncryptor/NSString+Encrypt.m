@@ -13,6 +13,19 @@
 
 @implementation NSString (Encrypt)
 
++ (NSString *)base64EncodeData:(NSData *)data
+{
+    NSData *encodeData = [data base64EncodedDataWithOptions:0];
+    NSString *base64Str = [[NSString alloc] initWithData:encodeData encoding:NSUTF8StringEncoding];
+    return base64Str;
+}
+
++ (NSData *)base64DecodeString:(NSString *)base64Str
+{
+    NSData *data = [[NSData alloc] initWithBase64EncodedString:base64Str options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    return data;
+}
+
 #pragma mark - Hash
 
 - (NSString *)md2String

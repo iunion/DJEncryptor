@@ -19,6 +19,7 @@
 		5A32E2D11EBAD7E600D9E8A5 /* NSString+Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A32E2D01EBAD7E600D9E8A5 /* NSString+Encrypt.m */; };
 		5A32E2D61EBAFE2F00D9E8A5 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A32E2D41EBAFE2F00D9E8A5 /* GTMBase64.m */; };
 		5A32E2DA1EBAFF1E00D9E8A5 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A32E2D91EBAFF1E00D9E8A5 /* libz.tbd */; };
+		5A32E2DD1EBC2C7400D9E8A5 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A32E2DC1EBC2C7400D9E8A5 /* RSA.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		5A32E2D41EBAFE2F00D9E8A5 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
 		5A32E2D51EBAFE2F00D9E8A5 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		5A32E2D91EBAFF1E00D9E8A5 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		5A32E2DB1EBC2C7400D9E8A5 /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
+		5A32E2DC1EBC2C7400D9E8A5 /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +166,8 @@
 				5A32E2CD1EBAD7CC00D9E8A5 /* NSData+Encrypt.m */,
 				5A32E2CF1EBAD7E600D9E8A5 /* NSString+Encrypt.h */,
 				5A32E2D01EBAD7E600D9E8A5 /* NSString+Encrypt.m */,
+				5A32E2DB1EBC2C7400D9E8A5 /* RSA.h */,
+				5A32E2DC1EBC2C7400D9E8A5 /* RSA.m */,
 			);
 			name = DJEncryptor;
 			path = ../DJEncryptor;
@@ -319,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A32E2DD1EBC2C7400D9E8A5 /* RSA.m in Sources */,
 				5A32E2A01EBAD75E00D9E8A5 /* ViewController.m in Sources */,
 				5A32E2D61EBAFE2F00D9E8A5 /* GTMBase64.m in Sources */,
 				5A32E29D1EBAD75E00D9E8A5 /* AppDelegate.m in Sources */,
@@ -556,6 +562,7 @@
 				5A32E2C41EBAD75E00D9E8A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A32E2C51EBAD75E00D9E8A5 /* Build configuration list for PBXNativeTarget "DJEncryptorSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -564,6 +571,7 @@
 				5A32E2C71EBAD75E00D9E8A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A32E2C81EBAD75E00D9E8A5 /* Build configuration list for PBXNativeTarget "DJEncryptorSampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -572,6 +580,7 @@
 				5A32E2CA1EBAD75E00D9E8A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,6 +10,9 @@
 
 @interface NSString (Encrypt)
 
++ (NSString *)base64EncodeData:(NSData *)data;
++ (NSData *)base64DecodeString:(NSString *)base64Str;
+
 #pragma mark - Hash
 
 /**
@@ -118,7 +121,6 @@
  
  @return            An NSData encrypted, or nil if an error occurs.
  */
-
 - (NSString *)AES256EncryptedDataUsingKey:(id)key iv:(id)iv error:(NSError **)error;
 - (NSString *)AES256DecryptedDataUsingKey:(id)key iv:(id)iv error:(NSError **)error;
 - (NSString *)DESEncryptedDataUsingKey:(id)key iv:(id)iv error:(NSError **)error;

@@ -284,6 +284,7 @@ extern NSString *const kDJEncryptErrorDomain;
 
 
 #pragma mark - Encode and decode
+
 ///=============================================================================
 /// @name Encode and decode
 ///=============================================================================
