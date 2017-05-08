@@ -8,7 +8,6 @@
 
 #import "NSString+Encrypt.h"
 #import <CommonCrypto/CommonCrypto.h>
-#import "GTMBase64.h"
 #import "NSData+Encrypt.h"
 
 @implementation NSString (Encrypt)
