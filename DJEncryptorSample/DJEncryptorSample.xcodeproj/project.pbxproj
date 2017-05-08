@@ -20,6 +20,8 @@
 		5A32E2D61EBAFE2F00D9E8A5 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A32E2D41EBAFE2F00D9E8A5 /* GTMBase64.m */; };
 		5A32E2DA1EBAFF1E00D9E8A5 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A32E2D91EBAFF1E00D9E8A5 /* libz.tbd */; };
 		5A32E2DD1EBC2C7400D9E8A5 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A32E2DC1EBC2C7400D9E8A5 /* RSA.m */; };
+		5A32E2E01EC004B300D9E8A5 /* rsa_private_key.pem in Resources */ = {isa = PBXBuildFile; fileRef = 5A32E2DE1EC004B300D9E8A5 /* rsa_private_key.pem */; };
+		5A32E2E11EC004B300D9E8A5 /* rsa_public_key.pem in Resources */ = {isa = PBXBuildFile; fileRef = 5A32E2DF1EC004B300D9E8A5 /* rsa_public_key.pem */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		5A32E2D91EBAFF1E00D9E8A5 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		5A32E2DB1EBC2C7400D9E8A5 /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
 		5A32E2DC1EBC2C7400D9E8A5 /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
+		5A32E2DE1EC004B300D9E8A5 /* rsa_private_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rsa_private_key.pem; sourceTree = "<group>"; };
+		5A32E2DF1EC004B300D9E8A5 /* rsa_public_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rsa_public_key.pem; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,8 @@
 				5A32E29E1EBAD75E00D9E8A5 /* ViewController.h */,
 				5A32E29F1EBAD75E00D9E8A5 /* ViewController.m */,
 				5A32E2A11EBAD75E00D9E8A5 /* Main.storyboard */,
+				5A32E2DE1EC004B300D9E8A5 /* rsa_private_key.pem */,
+				5A32E2DF1EC004B300D9E8A5 /* rsa_public_key.pem */,
 				5A32E2A41EBAD75E00D9E8A5 /* Assets.xcassets */,
 				5A32E2A61EBAD75E00D9E8A5 /* LaunchScreen.storyboard */,
 				5A32E2A91EBAD75E00D9E8A5 /* Info.plist */,
@@ -298,8 +304,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A32E2A81EBAD75E00D9E8A5 /* LaunchScreen.storyboard in Resources */,
+				5A32E2E11EC004B300D9E8A5 /* rsa_public_key.pem in Resources */,
 				5A32E2A51EBAD75E00D9E8A5 /* Assets.xcassets in Resources */,
 				5A32E2A31EBAD75E00D9E8A5 /* Main.storyboard in Resources */,
+				5A32E2E01EC004B300D9E8A5 /* rsa_private_key.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

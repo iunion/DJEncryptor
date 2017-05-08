@@ -10,7 +10,14 @@
 
 @interface NSString (Encrypt)
 
+/**
+ Returns a NSString for base64 encoded.
+ */
 + (NSString *)base64EncodeData:(NSData *)data;
+
+/**
+ Returns a NSData for base64 decoded.
+ */
 + (NSData *)base64DecodeString:(NSString *)base64Str;
 
 #pragma mark - Hash
@@ -91,16 +98,6 @@
  @param key The hmac key.
  */
 - (NSString *)hmacSHA512StringWithKey:(NSString *)key;
-
-/**
- Returns an NSString for base64 encoded.
- */
-- (NSString *)encodeGTMBase64;
-
-/**
- Returns an NSString for base64 decoded.
- */
-- (NSString *)decodeGTMBase64;
 
 /**
  Returns a lowercase NSString for crc32 hash.

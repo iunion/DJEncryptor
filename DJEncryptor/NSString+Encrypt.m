@@ -120,16 +120,6 @@
             hmacSHA512StringWithKey:key];
 }
 
-- (NSString *)encodeGTMBase64
-{
-    return [GTMBase64 encodeBase64String:self];
-}
-
-- (NSString *)decodeGTMBase64
-{
-    return [GTMBase64 decodeBase64String:self];
-}
-
 - (NSString *)crc32String
 {
     return [[self dataUsingEncoding:NSUTF8StringEncoding] crc32String];
@@ -190,12 +180,12 @@
     NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
     NSData *result = [data AES256EncryptedDataUsingKey:key iv:iv error:error];
     
-    return [GTMBase64 encodeBase64Data:result];
+    return [NSString base64EncodeData:result];
 }
 
 - (NSString *)Base64AES256DecryptedDataUsingKey:(id)key iv:(id)iv error:(NSError **)error
 {
-    NSData *data = [GTMBase64 decodeString:self];
+    NSData *data = [NSString base64DecodeString:self];
     NSData *result = [data AES256DecryptedDataUsingKey:key iv:iv error:error];
     
     return [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding];
@@ -206,12 +196,12 @@
     NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
     NSData *result = [data DESEncryptedDataUsingKey:key iv:iv error:error];
     
-    return [GTMBase64 encodeBase64Data:result];
+    return [NSString base64EncodeData:result];
 }
 
 - (NSString *)Base64DESDecryptedDataUsingKey:(id)key iv:(id)iv error:(NSError **)error
 {
-    NSData *data = [GTMBase64 decodeString:self];
+    NSData *data = [NSString base64DecodeString:self];
     NSData *result = [data DESDecryptedDataUsingKey:key iv:iv error:error];
     
     return [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding];
@@ -222,12 +212,12 @@
     NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
     NSData *result = [data TripleDESEncryptedDataUsingKey:key iv:iv error:error];
     
-    return [GTMBase64 encodeBase64Data:result];
+    return [NSString base64EncodeData:result];
 }
 
 - (NSString *)Base64TripleDESDecryptedDataUsingKey:(id)key iv:(id)iv error:(NSError **)error
 {
-    NSData *data = [GTMBase64 decodeString:self];
+    NSData *data = [NSString base64DecodeString:self];
     NSData *result = [data TripleDESDecryptedDataUsingKey:key iv:iv error:error];
     
     return [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding];

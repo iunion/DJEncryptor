@@ -8,8 +8,12 @@
 
 #import "ViewController.h"
 #import "NSString+Encrypt.h"
+#import "RSA.h"
 
 @interface ViewController ()
+
+@property(nonatomic, copy) NSString *privateKeyPem;
+@property(nonatomic, copy) NSString *publicKeyPem;
 
 @end
 
@@ -38,9 +42,7 @@
     NSLog(@"hmacSHA384: %@", [string hmacSHA384StringWithKey:@"key"]);
     NSLog(@"hmacSHA512: %@", [string hmacSHA512StringWithKey:@"key"]);
     
-    NSString *encodeString = [string encodeGTMBase64];
-    NSLog(@"encodeString: %@", encodeString);
-    NSLog(@"decodeString: %@", [encodeString decodeGTMBase64]);
+    NSString *encodeString;
     
     NSLog(@"crc32String: %@", [string crc32String]);
     
@@ -80,7 +82,21 @@
     encodeString = [string DESEncryptedDataUsingKey:@"123456789" iv:@"123456789" error:nil];
     NSLog(@"%@", encodeString);
     NSLog(@"%@", [encodeString DESDecryptedDataUsingKey:@"123456789" iv:@"123456789" error:nil]);
+    
+    
+    
+    NSString* file = [[NSBundle mainBundle]pathForResource:@"rsa_private_key" ofType:@"pem"];
+    self.privateKeyPem = [NSString stringWithContentsOfFile:file encoding:NSUTF8StringEncoding error:nil];
+    
+    file = [[NSBundle mainBundle]pathForResource:@"rsa_public_key" ofType:@"pem"];
+    self.publicKeyPem = [NSString stringWithContentsOfFile:file encoding:NSUTF8StringEncoding error:nil];
+    
+    NSError *error = nil;
 
+    encodeString = [RSA encryptString:string publicPemKey:self.publicKeyPem error:&error];
+    NSLog(@"%@", encodeString);
+    NSString *decodeString = [RSA decryptString:encodeString privatePemKey:self.privateKeyPem error:nil];
+    NSLog(@"%@", decodeString);
 }
 
 

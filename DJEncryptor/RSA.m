@@ -228,7 +228,7 @@ NSString *const kDJRSAPrivKeyTag = @"DJRSA_PrivateKey";
     [publicKey setObject:(__bridge id) kSecAttrKeyTypeRSA forKey:(__bridge id)kSecAttrKeyType];
     [publicKey setObject:tagData forKey:(__bridge id)kSecAttrApplicationTag];
     OSStatus deleteStatus = SecItemDelete((__bridge CFDictionaryRef)publicKey);
-    if (deleteStatus != errSecSuccess)
+    if (deleteStatus != errSecSuccess && deleteStatus != errSecItemNotFound)
     {
         *error = [NSError errorWithRSAOSStatus:deleteStatus];
         return nil;
@@ -488,7 +488,7 @@ NSString *const kDJRSAPrivKeyTag = @"DJRSA_PrivateKey";
     [privateKey setObject:(__bridge id) kSecAttrKeyTypeRSA forKey:(__bridge id)kSecAttrKeyType];
     [privateKey setObject:tagData forKey:(__bridge id)kSecAttrApplicationTag];
     OSStatus deleteStatus = SecItemDelete((__bridge CFDictionaryRef)privateKey);
-    if (deleteStatus != errSecSuccess)
+    if (deleteStatus != errSecSuccess && deleteStatus != errSecItemNotFound)
     {
         *error = [NSError errorWithRSAOSStatus:deleteStatus];
         return nil;
@@ -640,7 +640,7 @@ NSString *const kDJRSAPrivKeyTag = @"DJRSA_PrivateKey";
     }
     
     SecKeyRef publicKey = [RSA publicKeyFromData:publicKeyData withTag:nil error:error];
-    if (publicKey == nil || *error)
+    if (publicKey == nil)
     {
         return nil;
     }
@@ -695,7 +695,7 @@ NSString *const kDJRSAPrivKeyTag = @"DJRSA_PrivateKey";
     }
     
     SecKeyRef publicKey = [RSA publickeyFromDer:derFileData error:error];
-    if (publicKey == nil || *error)
+    if (publicKey == nil)
     {
         return nil;
     }
@@ -757,7 +757,7 @@ NSString *const kDJRSAPrivKeyTag = @"DJRSA_PrivateKey";
     }
     
     SecKeyRef publicKey = [RSA publicKeyFromData:publicKeyData withTag:nil error:error];
-    if (publicKey == nil || *error)
+    if (publicKey == nil)
     {
         return nil;
     }
@@ -819,7 +819,7 @@ NSString *const kDJRSAPrivKeyTag = @"DJRSA_PrivateKey";
     }
     
     SecKeyRef privateKey = [RSA privateKeyFromData:privateKeyData withTag:nil error:error];
-    if (privateKey == nil || *error)
+    if (privateKey == nil)
     {
         return nil;
     }
