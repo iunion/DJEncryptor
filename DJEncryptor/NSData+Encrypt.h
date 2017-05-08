@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <CommonCrypto/CommonCryptor.h>
 
-extern NSString *const kDJEncryptErrorDomain;
+extern NSString * _Nonnull const kDJEncryptErrorDomain;
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface NSError (Encrypt)
 
@@ -208,16 +210,16 @@ extern NSString *const kDJEncryptErrorDomain;
  
  @return            An NSData encrypted, or nil if an error occurs.
  */
-- (NSData *)dataEncryptedUsingAlgorithm:(CCAlgorithm)algorithm
+- (nullable NSData *)dataEncryptedUsingAlgorithm:(CCAlgorithm)algorithm
                                     key:(id)key
                                   error:(CCCryptorStatus *)error;
-- (NSData *)dataEncryptedUsingAlgorithm:(CCAlgorithm)algorithm
+- (nullable NSData *)dataEncryptedUsingAlgorithm:(CCAlgorithm)algorithm
                                     key:(id)key
                                 options:(CCOptions)options
                                   error:(CCCryptorStatus *)error;
-- (NSData *)dataEncryptedUsingAlgorithm:(CCAlgorithm)algorithm
+- (nullable NSData *)dataEncryptedUsingAlgorithm:(CCAlgorithm)algorithm
                                     key:(id)key
-                   initializationVector:(id)iv
+                   initializationVector:(nullable id)iv
                                 options:(CCOptions)options
                                   error:(CCCryptorStatus *)error;
 
@@ -235,16 +237,16 @@ extern NSString *const kDJEncryptErrorDomain;
  
  @return            An NSData encrypted, or nil if an error occurs.
  */
-- (NSData *)dataDecryptedUsingAlgorithm:(CCAlgorithm)algorithm
+- (nullable NSData *)dataDecryptedUsingAlgorithm:(CCAlgorithm)algorithm
                                     key:(id)key
                                   error:(CCCryptorStatus *)error;
-- (NSData *)dataDecryptedUsingAlgorithm:(CCAlgorithm)algorithm
+- (nullable NSData *)dataDecryptedUsingAlgorithm:(CCAlgorithm)algorithm
                                     key:(id)key
                                 options:(CCOptions)options
                                   error:(CCCryptorStatus *)error;
-- (NSData *)dataDecryptedUsingAlgorithm:(CCAlgorithm)algorithm
+- (nullable NSData *)dataDecryptedUsingAlgorithm:(CCAlgorithm)algorithm
                                     key:(id)key
-                   initializationVector:(id)iv
+                   initializationVector:(nullable id)iv
                                 options:(CCOptions)options
                                   error:(CCCryptorStatus *)error;
 
@@ -266,21 +268,21 @@ extern NSString *const kDJEncryptErrorDomain;
  
  @return                    An NSData encrypted, or nil if an error occurs.
  */
-- (NSData *)dataUsingAlgorithm:(CCAlgorithm)algorithm
+- (nullable NSData *)dataUsingAlgorithm:(CCAlgorithm)algorithm
               encryptOrDecrypt:(CCOperation)encryptOrDecrypt
                            key:(id)key
-          initializationVector:(id)iv
+          initializationVector:(nullable id)iv
                        options:(CCOptions)options
                          error:(CCCryptorStatus *)error;
 
 // AES
-- (NSData *)AES256EncryptedDataUsingKey:(id)key iv:(id)iv error:(NSError **)error;
-- (NSData *)AES256DecryptedDataUsingKey:(id)key iv:(id)iv error:(NSError **)error;
+- (nullable NSData *)AES256EncryptedDataUsingKey:(id)key iv:(nullable id)iv error:(NSError **)error;
+- (nullable NSData *)AES256DecryptedDataUsingKey:(id)key iv:(nullable id)iv error:(NSError **)error;
 // DES
-- (NSData *)DESEncryptedDataUsingKey:(id)key iv:(id)iv error:(NSError **)error;
-- (NSData *)DESDecryptedDataUsingKey:(id)key iv:(id)iv error:(NSError **)error;
-- (NSData *)TripleDESEncryptedDataUsingKey:(id)key iv:(id)iv error:(NSError **)error;
-- (NSData *)TripleDESDecryptedDataUsingKey:(id)key iv:(id)iv error:(NSError **)error;
+- (nullable NSData *)DESEncryptedDataUsingKey:(id)key iv:(nullable id)iv error:(NSError **)error;
+- (nullable NSData *)DESDecryptedDataUsingKey:(id)key iv:(nullable id)iv error:(NSError **)error;
+- (nullable NSData *)TripleDESEncryptedDataUsingKey:(id)key iv:(nullable id)iv error:(NSError **)error;
+- (nullable NSData *)TripleDESDecryptedDataUsingKey:(id)key iv:(nullable id)iv error:(NSError **)error;
 
 
 #pragma mark - Encode and decode
@@ -323,25 +325,25 @@ extern NSString *const kDJEncryptErrorDomain;
  Decompress data from gzip data.
  @return Inflated data.
  */
-- (NSData *)gzipInflate;
+- (nullable NSData *)gzipInflate;
 
 /**
  Comperss data to gzip in default compresssion level.
  @return Deflated data.
  */
-- (NSData *)gzipDeflate;
+- (nullable NSData *)gzipDeflate;
 
 /**
  Decompress data from zlib-compressed data.
  @return Inflated data.
  */
-- (NSData *)zlibInflate;
+- (nullable NSData *)zlibInflate;
 
 /**
  Comperss data to zlib-compressed in default compresssion level.
  @return Deflated data.
  */
-- (NSData *)zlibDeflate;
+- (nullable NSData *)zlibDeflate;
 
 
 #pragma mark - File hash
@@ -351,22 +353,22 @@ extern NSString *const kDJEncryptErrorDomain;
  
  @param filePath   The file.
  */
-+ (NSData *)getFileMD5HashData:(NSString *)filePath;
++ (nullable NSData *)getFileMD5HashData:(NSString *)filePath;
 /**
  Returns a lowercase string for md5 hash of the file.
  
  @param filePath   The file.
  */
-+ (NSString *)getFileMD5HashString:(NSString *)filePath;
++ (nullable NSString *)getFileMD5HashString:(NSString *)filePath;
 
-+ (NSData *)getFileSHA1HashData:(NSString *)filePath;
-+ (NSString *)getFileSHA1HashString:(NSString *)filePath;
++ (nullable NSData *)getFileSHA1HashData:(NSString *)filePath;
++ (nullable NSString *)getFileSHA1HashString:(NSString *)filePath;
 
-+ (NSData *)getFileSHA256HashData:(NSString *)filePath;
-+ (NSString *)getFileSHA256HashString:(NSString *)filePath;
++ (nullable NSData *)getFileSHA256HashData:(NSString *)filePath;
++ (nullable NSString *)getFileSHA256HashString:(NSString *)filePath;
 
-+ (NSData *)getFileSHA512HashData:(NSString *)filePath;
-+ (NSString *)getFileSHA512HashString:(NSString *)filePath;
++ (nullable NSData *)getFileSHA512HashData:(NSString *)filePath;
++ (nullable NSString *)getFileSHA512HashString:(NSString *)filePath;
 
 /**
  Returns crc32 hash of a file.
@@ -377,3 +379,6 @@ extern NSString *const kDJEncryptErrorDomain;
 + (NSString *)getFileCRC32String:(NSString *)filePath;
 
 @end
+
+NS_ASSUME_NONNULL_END
+

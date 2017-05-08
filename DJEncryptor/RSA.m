@@ -608,7 +608,7 @@ NSString *const kDJRSAPrivKeyTag = @"DJRSA_PrivateKey";
 }
 
 
-#pragma mark - Public fun 对外接口
+#pragma mark - Public func 对外接口
 
 #pragma mark PEM加密
 + (NSData *)encryptWithString:(NSString *)string publicPemKey:(NSString *)pubKey error:(NSError **)error

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NSString (Encrypt)
 
 /**
@@ -118,12 +120,12 @@
  
  @return            An NSData encrypted, or nil if an error occurs.
  */
-- (NSString *)AES256EncryptedDataUsingKey:(id)key iv:(id)iv error:(NSError **)error;
-- (NSString *)AES256DecryptedDataUsingKey:(id)key iv:(id)iv error:(NSError **)error;
-- (NSString *)DESEncryptedDataUsingKey:(id)key iv:(id)iv error:(NSError **)error;
-- (NSString *)DESDecryptedDataUsingKey:(id)key iv:(id)iv error:(NSError **)error;
-- (NSString *)TripleDESEncryptedDataUsingKey:(id)key iv:(id)iv error:(NSError **)error;
-- (NSString *)TripleDESDecryptedDataUsingKey:(id)key iv:(id)iv error:(NSError **)error;
+- (nullable NSString *)AES256EncryptedDataUsingKey:(id)key iv:(nullable id)iv error:(NSError **)error;
+- (nullable NSString *)AES256DecryptedDataUsingKey:(id)key iv:(nullable id)iv error:(NSError **)error;
+- (nullable NSString *)DESEncryptedDataUsingKey:(id)key iv:(nullable id)iv error:(NSError **)error;
+- (nullable NSString *)DESDecryptedDataUsingKey:(id)key iv:(nullable id)iv error:(NSError **)error;
+- (nullable NSString *)TripleDESEncryptedDataUsingKey:(id)key iv:(nullable id)iv error:(NSError **)error;
+- (nullable NSString *)TripleDESDecryptedDataUsingKey:(id)key iv:(nullable id)iv error:(NSError **)error;
 
 /**
  Returns an encrypted base64 encoded NSString using an algorithm(AES, DES ...).
@@ -137,25 +139,27 @@
  
  @return            An NSData encrypted, or nil if an error occurs.
  */
-- (NSString *)Base64AES256EncryptedDataUsingKey:(id)key iv:(id)iv error:(NSError **)error;
-- (NSString *)Base64AES256DecryptedDataUsingKey:(id)key iv:(id)iv error:(NSError **)error;
-- (NSString *)Base64DESEncryptedDataUsingKey:(id)key iv:(id)iv error:(NSError **)error;
-- (NSString *)Base64DESDecryptedDataUsingKey:(id)key iv:(id)iv error:(NSError **)error;
-- (NSString *)Base64TripleDESEncryptedDataUsingKey:(id)key iv:(id)iv error:(NSError **)error;
-- (NSString *)Base64TripleDESDecryptedDataUsingKey:(id)key iv:(id)iv error:(NSError **)error;
+- (nullable NSString *)Base64AES256EncryptedDataUsingKey:(id)key iv:(nullable id)iv error:(NSError **)error;
+- (nullable NSString *)Base64AES256DecryptedDataUsingKey:(id)key iv:(nullable id)iv error:(NSError **)error;
+- (nullable NSString *)Base64DESEncryptedDataUsingKey:(id)key iv:(nullable id)iv error:(NSError **)error;
+- (nullable NSString *)Base64DESDecryptedDataUsingKey:(id)key iv:(nullable id)iv error:(NSError **)error;
+- (nullable NSString *)Base64TripleDESEncryptedDataUsingKey:(id)key iv:(nullable id)iv error:(NSError **)error;
+- (nullable NSString *)Base64TripleDESDecryptedDataUsingKey:(id)key iv:(nullable id)iv error:(NSError **)error;
 
 
 #pragma mark - File hash
 
-- (NSString *)fileMD5Hash;
+- (nullable NSString *)fileMD5Hash;
 
-- (NSString *)fileSHA1Hash;
+- (nullable NSString *)fileSHA1Hash;
 
-- (NSString *)fileSHA256Hash;
+- (nullable NSString *)fileSHA256Hash;
 
-- (NSString *)fileSHA512Hash;
+- (nullable NSString *)fileSHA512Hash;
 
-- (NSString *)fileCRC32SHash;
+- (nullable NSString *)fileCRC32SHash;
 
 
 @end
+
+NS_ASSUME_NONNULL_END

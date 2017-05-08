@@ -46,6 +46,10 @@
     
     NSLog(@"crc32String: %@", [string crc32String]);
     
+    encodeString = [string DESEncryptedDataUsingKey:@"12345678" iv:nil error:nil];
+    NSLog(@"%@", encodeString);
+    NSLog(@"%@", [encodeString DESDecryptedDataUsingKey:@"12345678" iv:nil error:nil]);
+
     encodeString = [string DESEncryptedDataUsingKey:@"12345678" iv:@"12345678" error:nil];
     NSLog(@"%@", encodeString);
     NSLog(@"%@", [encodeString DESDecryptedDataUsingKey:@"12345678" iv:@"12345678" error:nil]);
