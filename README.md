@@ -1,11 +1,7 @@
 DJEncryptor 
 ==============
 
-Simple AES, RSA encryption / decryption and Hash(MD5, HmacMD5, SHA1~SHA512, HmacSHA1~HmacSHA512) for iOS and OS X. <br/>
-
-## Screenshots
-
-![image](/gif/demo.gif)
+Simple AES, RSA encryption / decryption and Hash(MD5, HmacMD5, SHA1__SHA512, HmacSHA1__HmacSHA512) for iOS and OS X. <br/>
 
 ## Requirements
 
