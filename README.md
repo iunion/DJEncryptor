@@ -247,7 +247,7 @@ NSLog(@"%@", encodeString);
 decodeString = [RSA decryptString:encodeString privatePemKey:self.privateKeyPem error:nil];
 NSLog(@"%@", decodeString);
 ```
-### RSA sample
+### RSA output
 ``` objective-c
 // pem
 encodeString:T1tW5f9wUcbHXap7fTgSuT5HGZKBxq+N6Hypula4puWrW2FV1/rDG81TdWIF+eDOYL3YaEsYIIZ9Q9ZqrNDt6lwMrylyQLJoCVmHIIkxagYAwUTBz7tGKWV3mUXMD28hSIgoAmkUKCbmwwUp5fdFB4vzGuK3p0DuZ2njdIR1ApDQ3SlUXrFqAS4fWUd5bETF8bvwhFmVL+PwjNsii06ITPlQsa7ozoQR6U1Wfmp4cy9As9ir0qihQT1/XrKuyDOVYrXcgYGNlKGWxe/SLSuMjGZXBhArmLy/R29QmDLe9CkTBthP6Z1HqW3WRZKCgd7lDAhgZgGwYuGzOX1QdSC9Cg==
