@@ -15,12 +15,12 @@ Simple AES, RSA encryption / decryption and Hash(MD5, HmacMD5, SHA1__SHA512, Hma
 ## Installation
 
 1.You should copy below files to your projects:
-`NSData+Encrypt.h`
-`NSData+Encrypt.m`
-`NSString+Encrypt.h`
-`NSString+Encrypt.m`
-`RSA.h`
-`RSA.m`
+- `NSData+Encrypt.h`
+- `NSData+Encrypt.m`
+- `NSString+Encrypt.h`
+- `NSString+Encrypt.m`
+- `RSA.h`
+- `RSA.m`
 
 2.Add under lines to your class:
 ``` objective-c
@@ -58,7 +58,7 @@ NSLog(@"hmacSHA384: %@", [string hmacSHA384StringWithKey:@"key"]);
 NSLog(@"hmacSHA512: %@", [string hmacSHA512StringWithKey:@"key"]);
 ```
 
-### Hash
+### crc32
 ``` objective-c
 [string crc32String];
 ```
@@ -141,8 +141,8 @@ NSLog(@"%@", [encodeString DESDecryptedDataUsingKey:@"12345678" iv:nil error:nil
 
 ```
 ``` objective-c
-670c1a49f0b76cad672226374722ded2237af9040af48c858680fd7f69dcfafa35e8bf71f450160e7f57ba77b3880c10b093f59ac175f9293fc16d1e4d353e33fd280b8d0b508692
-Do any additional setup after loading the view, typically from a nib.
+encodeString:670c1a49f0b76cad672226374722ded2237af9040af48c858680fd7f69dcfafa35e8bf71f450160e7f57ba77b3880c10b093f59ac175f9293fc16d1e4d353e33fd280b8d0b508692
+decodeString:Do any additional setup after loading the view, typically from a nib.
 ```
 
 ``` objective-c
@@ -183,8 +183,8 @@ NSLog(@"%@", encodeString);
 NSLog(@"%@", [encodeString DESDecryptedDataUsingKey:@"12345678" iv:@"12345678" error:nil]);
 ```
 ``` objective-c
-468ccd80798f771322fd4592228bdb07696bb6510861ee77ae871304bfffa35f9ad43e312da68247ef2e0f9006046274d8bf367b4f8a79893e692692814798e36adacc3f45d73a2e
-Do any additional setup after loading the view, typically from a nib.
+encodeString:468ccd80798f771322fd4592228bdb07696bb6510861ee77ae871304bfffa35f9ad43e312da68247ef2e0f9006046274d8bf367b4f8a79893e692692814798e36adacc3f45d73a2e
+decodeString:Do any additional setup after loading the view, typically from a nib.
 ```
 length of `iv` is 9
 ``` objective-c
@@ -193,8 +193,8 @@ NSLog(@"%@", encodeString);
 NSLog(@"%@", [encodeString DESDecryptedDataUsingKey:@"12345678" iv:@"123456789" error:nil]);
 ```
 ``` objective-c
-468ccd80798f771322fd4592228bdb07696bb6510861ee77ae871304bfffa35f9ad43e312da68247ef2e0f9006046274d8bf367b4f8a79893e692692814798e36adacc3f45d73a2e
-Do any additional setup after loading the view, typically from a nib.
+encodeString:468ccd80798f771322fd4592228bdb07696bb6510861ee77ae871304bfffa35f9ad43e312da68247ef2e0f9006046274d8bf367b4f8a79893e692692814798e36adacc3f45d73a2e
+decodeString:Do any additional setup after loading the view, typically from a nib.
 ```
 
 ### Inflate and deflate
@@ -248,12 +248,13 @@ decodeString = [RSA decryptString:encodeString privatePemKey:self.privateKeyPem 
 NSLog(@"%@", decodeString);
 ```
 ### RSA sample
+``` objective-c
 // pem
-T1tW5f9wUcbHXap7fTgSuT5HGZKBxq+N6Hypula4puWrW2FV1/rDG81TdWIF+eDOYL3YaEsYIIZ9Q9ZqrNDt6lwMrylyQLJoCVmHIIkxagYAwUTBz7tGKWV3mUXMD28hSIgoAmkUKCbmwwUp5fdFB4vzGuK3p0DuZ2njdIR1ApDQ3SlUXrFqAS4fWUd5bETF8bvwhFmVL+PwjNsii06ITPlQsa7ozoQR6U1Wfmp4cy9As9ir0qihQT1/XrKuyDOVYrXcgYGNlKGWxe/SLSuMjGZXBhArmLy/R29QmDLe9CkTBthP6Z1HqW3WRZKCgd7lDAhgZgGwYuGzOX1QdSC9Cg==
-Do any additional setup after loading the view, typically from a nib.
+encodeString:T1tW5f9wUcbHXap7fTgSuT5HGZKBxq+N6Hypula4puWrW2FV1/rDG81TdWIF+eDOYL3YaEsYIIZ9Q9ZqrNDt6lwMrylyQLJoCVmHIIkxagYAwUTBz7tGKWV3mUXMD28hSIgoAmkUKCbmwwUp5fdFB4vzGuK3p0DuZ2njdIR1ApDQ3SlUXrFqAS4fWUd5bETF8bvwhFmVL+PwjNsii06ITPlQsa7ozoQR6U1Wfmp4cy9As9ir0qihQT1/XrKuyDOVYrXcgYGNlKGWxe/SLSuMjGZXBhArmLy/R29QmDLe9CkTBthP6Z1HqW3WRZKCgd7lDAhgZgGwYuGzOX1QdSC9Cg==
+decodeString:Do any additional setup after loading the view, typically from a nib.
 // der
-Xx3U3aKjJYgy69eav5QTPuK5skfdlGIGcT74MgxHxKQUM5K0WSotD0N5Um3qybohpQya8iQrxHoWA74/EPt4P2yCjxxohmd5OIBkvTCwXIx84qUafrmyYwG2mM9lL1V/4orN7/vi7OdnFIDSWafhLq54icbF0q6ejEx8ajWw+YdZAc0UvzD+KYiUPrM1hr4cwrwdKbNzcw2zSWUku61KwxHpr4aewFXqmSSGFwlKtU2VExkE6H1tcOow3Gm0t8vch7hnTZR8GFYBhMqJYwtbNxD687di7hCDAgpLA+wtYJJKoB4i7wh9NMzRAEd4N6lOpQRRnTwUqG9YQ35QZ1P6LQ==
-Do any additional setup after loading the view, typically from a nib.
+encodeString:Xx3U3aKjJYgy69eav5QTPuK5skfdlGIGcT74MgxHxKQUM5K0WSotD0N5Um3qybohpQya8iQrxHoWA74/EPt4P2yCjxxohmd5OIBkvTCwXIx84qUafrmyYwG2mM9lL1V/4orN7/vi7OdnFIDSWafhLq54icbF0q6ejEx8ajWw+YdZAc0UvzD+KYiUPrM1hr4cwrwdKbNzcw2zSWUku61KwxHpr4aewFXqmSSGFwlKtU2VExkE6H1tcOow3Gm0t8vch7hnTZR8GFYBhMqJYwtbNxD687di7hCDAgpLA+wtYJJKoB4i7wh9NMzRAEd4N6lOpQRRnTwUqG9YQ35QZ1P6LQ==
+decodeString:Do any additional setup after loading the view, typically from a nib.
 ```
 
 ## Author
