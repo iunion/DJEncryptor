@@ -12,8 +12,10 @@
 
 @interface ViewController ()
 
-@property(nonatomic, copy) NSString *privateKeyPem;
-@property(nonatomic, copy) NSString *publicKeyPem;
+@property (nonatomic, copy) NSString *privateKeyPem;
+@property (nonatomic, copy) NSString *publicKeyPem;
+
+@property (nonatomic, copy) NSData* publicKeyDer;
 
 @end
 
@@ -89,17 +91,25 @@
     
     
     
-    NSString* file = [[NSBundle mainBundle]pathForResource:@"rsa_private_key" ofType:@"pem"];
+    NSString* file = [[NSBundle mainBundle] pathForResource:@"rsa_private_key" ofType:@"pem"];
     self.privateKeyPem = [NSString stringWithContentsOfFile:file encoding:NSUTF8StringEncoding error:nil];
     
-    file = [[NSBundle mainBundle]pathForResource:@"rsa_public_key" ofType:@"pem"];
+    file = [[NSBundle mainBundle] pathForResource:@"rsa_public_key" ofType:@"pem"];
     self.publicKeyPem = [NSString stringWithContentsOfFile:file encoding:NSUTF8StringEncoding error:nil];
+    
+    file = [[NSBundle mainBundle] pathForResource:@"rsa_public_key" ofType:@"der"];
+    self.publicKeyDer = [NSData dataWithContentsOfFile:file];
     
     NSError *error = nil;
 
     encodeString = [RSA encryptString:string publicPemKey:self.publicKeyPem error:&error];
     NSLog(@"%@", encodeString);
     NSString *decodeString = [RSA decryptString:encodeString privatePemKey:self.privateKeyPem error:nil];
+    NSLog(@"%@", decodeString);
+    
+    encodeString = [RSA encryptString:string publicDer:self.publicKeyDer error:nil];
+    NSLog(@"%@", encodeString);
+    decodeString = [RSA decryptString:encodeString privatePemKey:self.privateKeyPem error:nil];
     NSLog(@"%@", decodeString);
 }
 

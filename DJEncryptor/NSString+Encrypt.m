@@ -25,6 +25,7 @@
     return data;
 }
 
+
 #pragma mark - Hash
 
 - (NSString *)md2String
@@ -249,6 +250,5 @@
 {
     return [NSData getFileCRC32String:self];
 }
-
 
 @end
